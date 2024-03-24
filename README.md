@@ -17,6 +17,7 @@ docker exec -u 0 -it <container-name> /bin/bash
 ```
 
 To enter EC2 machine:
+`cd` into folder containing `.pem` file to access instance
 ```bash
 ssh -i "defcon-vm.pem" ec2-user@<ec2-instance-IP>
 ```
