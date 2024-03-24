@@ -5,6 +5,8 @@ RUN apt-get update && apt-get install -y openssh-server net-tools
 RUN mkdir -p /run/sshd \
   && chmod 755 /run/sshd
 
+RUN touch var/run/utmp
+
 RUN sed -i 's/#MaxSessions 10/MaxSessions 300/' /etc/ssh/sshd_config \
   && sed -i 's/#MaxStartups 10:30:100/MaxStartups 50:30:100/' /etc/ssh/sshd_config \
   && sed -i 's/#TCPKeepAlive yes/TCPKeepAlive yes/' /etc/ssh/sshd_config \
