@@ -26,3 +26,9 @@ To run Docker container:
 ```bash
 docker run --name defcon --restart=unless-stopped -d -p 5001(host-port):22(container-port) public.ecr.aws/m3r2m1y9/defcondev-server:latest(image name)
 ```
+
+For monitoring logged in IP and resource usage:
+```bash
+w
+top/btop
+```
