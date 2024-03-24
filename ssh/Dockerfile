@@ -20,7 +20,7 @@ RUN useradd -ms /bin/bash anon && \
   chmod 711 /bin/su
 
 RUN useradd -ms /bin/bash ecorp && \
-  echo 'ecorp:changethis' | chpasswd && \
+  echo 'ecorp:changethis' | chpasswd --crypt-method=SHA512 && \
   chown -R ecorp:ecorp /home/ecorp && \
   chmod -R 500 /home/ecorp && \
   chmod 700 /home/ecorp
