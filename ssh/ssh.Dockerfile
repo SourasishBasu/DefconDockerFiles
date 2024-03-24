@@ -3,7 +3,9 @@ FROM alpine:latest
 RUN apk add --no-cache --update \
 	nano \
     openssh \
-    bash 
+    bash \
+    shadow \
+    procps
 
 ADD [ "/src/sshd_config", "/etc/ssh/sshd_config" ]
 ADD ["/src/docker-entrypoint.sh", "/"]
