@@ -8,10 +8,10 @@ RUN apk add --no-cache --update \
     procps
 
 ADD [ "/src/sshd_config", "/etc/ssh/sshd_config" ]
-ADD ["/src/docker-entrypoint.sh", "/"]
+ADD ["/src/alpine-docker-entrypoint.sh", "/"]
 
-RUN chmod +x /docker-entrypoint.sh
-ENTRYPOINT [ "/docker-entrypoint.sh" ]
+RUN chmod +x /alpine-docker-entrypoint.sh
+ENTRYPOINT [ "/alpine-docker-entrypoint.sh" ]
 
 EXPOSE 22/tcp
 HEALTHCHECK --interval=5m --timeout=5s \
