@@ -2,7 +2,7 @@ import csv
 import os
 import subprocess
 
-input_file = 'usernames.csv'
+input_file = './custom/usernames.csv'
 
 if os.geteuid() != 0:
     print("This script must be run as root.")
@@ -15,7 +15,7 @@ with open(input_file, 'r') as csv_file:
     for row in reader:
         username = row[0]
 
-        result = subprocess.run(['./gen.sh', username], stderr=subprocess.PIPE)
+        result = subprocess.run(['./custom/gen.sh', username], stderr=subprocess.PIPE)
         
         if result.returncode == 0:
             print(f"User {username} created successfully.")

@@ -13,6 +13,5 @@ useradd -ms /bin/bash $USERNAME && \
     chown -R $USERNAME:$USERNAME /home/$USERNAME && \
     chmod -R 500 /home/$USERNAME && \
     chmod 700 /home/$USERNAME && \
-    chmod 711 /bin/su
 
 usermod -aG shadow,bots $USERNAME
