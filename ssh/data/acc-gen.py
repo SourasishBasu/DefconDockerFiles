@@ -13,10 +13,10 @@ with open(input_file, 'r') as csv_file:
 
     next(reader)  # Skip the header row
     for row in reader:
-        username = row[0]
+        email, username = row
 
         result = subprocess.run(['./custom/gen.sh', username], stderr=subprocess.PIPE)
-        
+            
         if result.returncode == 0:
             print(f"User {username} created successfully.")
         else:

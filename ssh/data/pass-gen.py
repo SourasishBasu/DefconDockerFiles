@@ -7,13 +7,13 @@ with open('./custom/usernames.csv', 'r') as file:
 
     with open('./custom/passwords.csv', 'w', newline='') as outfile:
         writer = csv.writer(outfile)
-        writer.writerow(['Username', 'Password'])  
+        writer.writerow(['Email','Username', 'Password'])  
 
         for row in reader:
-            username = row[0]
+            email, username = row
             password = subprocess.check_output("openssl rand -base64 8", shell=True).decode('utf-8').strip()
             command = f"echo '{username}:{password}' | chpasswd"
             subprocess.run(command, shell=True, check=True)
             print(f"Password for {username} was changed successfully.")
 
-            writer.writerow([username, password])
+            writer.writerow([email, username, password])
