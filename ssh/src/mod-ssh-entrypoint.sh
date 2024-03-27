@@ -19,7 +19,7 @@ chmod 700 /mod-ssh-entrypoint.sh
 chmod 500 -R /home/ecorp
 
 python3 custom/acc-gen.py
-python3 custom/pass-gen.py
+python3 custom/pass-mod.py
 python3 custom/protecc.py
 
 /usr/sbin/sshd -D

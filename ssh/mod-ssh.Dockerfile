@@ -16,7 +16,8 @@ RUN mkdir /custom
 
 ADD ["./data/gen.sh","/custom/"]
 ADD ["./data/acc-gen.py","/custom/"]
-ADD ["./data/pass-gen.py","/custom/"]
+ADD ["./data/pass-mod.py","/custom/"]
+ADD ["./data/passwords.csv","/custom/"]
 ADD ["./data/usernames.csv","/custom/"]
 ADD ["./data/protecc.py","/custom/"]
 ADD ["./data/paths.txt","/custom/"]
