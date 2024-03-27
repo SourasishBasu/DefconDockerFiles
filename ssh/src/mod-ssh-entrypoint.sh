@@ -14,11 +14,12 @@ touch /var/run/utmp
 
 chmod u+s /usr/bin/su
 chmod 700 /usr/bin/passwd
-chmod 700 /custom
+chmod 700 -R /custom
 chmod 700 /mod-ssh-entrypoint.sh
 chmod 500 -R /home/ecorp
 
 python3 custom/acc-gen.py
 python3 custom/pass-gen.py
+python3 custom/protecc.py
 
 /usr/sbin/sshd -D

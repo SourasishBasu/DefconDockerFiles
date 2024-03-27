@@ -2,7 +2,7 @@ import csv
 import os
 
 input_file = './mock_data.csv'
-output_file = './usernames.csv'
+output_file = '/data/usernames.csv'
 
 if not os.path.exists(input_file):
     print(f"Input file {input_file} does not exist.")
