@@ -26,7 +26,6 @@
 /etc/php.ini
 /etc/postfix/main.cf
 /etc/redis/redis.conf
-/etc/resolv.conf
 /etc/samba/smb.conf
 /etc/ssh/id_dsa
 /etc/ssh/id_ecdsa
