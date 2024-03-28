@@ -9,7 +9,13 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
     libffi-dev \
     python3-dev \
     python3-pip \
-    acl
+    acl \
+    software-properties-common \
+    apt-transport-https \
+    ca-certificates \ 
+    ncurses-term \
+    dkms \
+    curl 
 
 RUN mkdir /custom
 
