@@ -4,7 +4,6 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
 	nano \
     openssh-server \
     net-tools \
-    tmux \
     build-essential \
     libssl-dev \
     libffi-dev \
