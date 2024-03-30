@@ -40,3 +40,48 @@ cd into user directory
 ```bash
 tail -10f .bash_history | awk -W interactive '/^#/{printf "%-4d [%s] %s ", ++n, strftime("%F %T", substr($0, 2)), ENVIRON["PWD"];next}; 1'
 ```
+
+Tmux Config
+
+```bash
+nano $HOME/.tmux.conf
+```
+Config
+```bash
+set -g prefix `
+set -g base-index 1              # start indexing windows at 1 instead of 0
+set -g detach-on-destroy off     # don't exit from tmux when closing a session
+set -g escape-time 0             # zero-out escape time delay
+set -g history-limit 1000000     # increase history size (from 2,000)
+set -g renumber-windows on       # renumber all windows when any window is closed
+set -g set-clipboard on          # use system clipboard
+
+bind d detach
+bind r command-prompt "rename-window %%"
+bind R source-file ~/.tmux.conf
+bind ^A last-window
+bind ^W list-windows
+bind w list-windows
+bind z resize-pane -Z
+bind s split-window
+bind h split-window -v -c "#{pane_current_path}"
+bind v split-window -h -c "#{pane_current_path}"
+bind '"' choose-window
+bind : command-prompt
+bind x kill-pane
+bind c swap-pane -D
+bind S choose-session
+```
+
+Reload tmux config inside tmux session:
+```bash
+tmux ls
+tmux
+Ctrl + B + :
+"source-file ./.tmux.conf"
+```
+
+Attach to existing session
+```bash
+tmux attach
+```
