@@ -4,12 +4,16 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
 	nano \
     openssh-server \
     net-tools \
+    tmux \
     build-essential \
     libssl-dev \
     libffi-dev \
     python3-dev \
     python3-pip \
-    acl  
+    acl
+
+RUN echo 'export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"' >> /etc/skel/.bashrc
+RUN echo 'HISTTIMEFORMAT="%F %T "' >> /etc/skel/.bashrc
 
 RUN mkdir /custom
 
