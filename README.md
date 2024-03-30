@@ -38,5 +38,5 @@ ps aux
 Live logging:
 cd into user directory
 ```bash
-tail -10f .bash_history | awk '/^#/{printf "%-4d [%s] ", ++n, strftime("%F %T", substr($0, 2)); next}; 1'
+tail -10f .bash_history | awk -W interactive '/^#/{printf "%-4d [%s] %s ", ++n, strftime("%F %T", substr($0, 2)), ENVIRON["PWD"];next}; 1'
 ```
