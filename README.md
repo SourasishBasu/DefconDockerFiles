@@ -30,5 +30,13 @@ docker run --name defcon --restart=unless-stopped -d -p 5001(host-port):22(conta
 For monitoring logged in IP and resource usage:
 ```bash
 w
-top/btop
+who -Ha
+top
+ps aux
+```
+
+Live logging:
+cd into user directory
+```bash
+tail -10f .bash_history | awk '/^#/{printf "%-4d [%s] ", ++n, strftime("%F %T", substr($0, 2)); next}; 1'
 ```
