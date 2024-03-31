@@ -1,0 +1,1 @@
+Explore the /var, /logs, /etc directories, you might find some interesting stuff.

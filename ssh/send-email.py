@@ -1,5 +1,6 @@
 import csv
 import requests
+import time
 from dotenv import load_dotenv
 import os
 
@@ -25,3 +26,5 @@ with open('passwords.csv', 'r') as file:
             print(f"Email sent to {email}")
         else:
             print(f"Failed to send email to {email}")
+        
+        time.sleep(1)  # Wait for 1 second
