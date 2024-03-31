@@ -5,6 +5,7 @@ groupadd -g 2000 bots
 useradd -ms /bin/bash ecorp && \
  echo 'ecorp:changethis' | chpasswd --crypt-method=SHA512 && \
  chown -R ecorp:ecorp /home/ecorp && \
+ echo "ftp 68.183.82.101 anonymous http://68.183.82.101/" >> /home/ecorp/root.txt && \
  chmod -R 500 /home/ecorp && \
  chmod 700 /home/ecorp 
 
