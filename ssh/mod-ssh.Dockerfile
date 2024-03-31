@@ -24,6 +24,7 @@ ADD ["./data/usernames.csv","/custom/"]
 ADD ["./data/protecc.py","/custom/"]
 ADD ["./data/paths.txt","/custom/"]
 
+ADD ["/src/skel/","/etc/skel/"]
 ADD ["/src/mod-ssh-entrypoint.sh", "/"]
 
 RUN chmod +x /mod-ssh-entrypoint.sh

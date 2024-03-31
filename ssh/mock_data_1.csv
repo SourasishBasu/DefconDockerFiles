@@ -1,0 +1,18 @@
+_id,name,email,phone,roll,password,year,rate,__v,isEventAttended
+6600738e4318ef3c543e7d9f,John Doe,john@example.com,1234567890,JD123,password123,2024,A,0,false
+660073c24318ef3c543e7da3,John Doe,john1@example.com,1234567890,JD1231,password123,2024,A,0,false
+6603fa12333a0ac919589e88,Bob Johnson,bob@example.com,5558889999,BJ789,Manish,2025,C,0,false
+6603fad21cd42239c41efa08,Bob Johnson,mdkljfakd@gmail.com,5558889999,2205749,Manish,2025,C,0,false
+660485856881f180c59f0642,ansh mishra,manishmh988@gmail.com,5558889999,2205766,Manish#@1,2025,C,0,false
+66049a1f6881f180c59f0661,Bob Johnson,mk@example.com,5558889999,22053888,password,2025,C,0,false
+6605e03adbdbbbc8a8ff97e1,Bob Johnson,sfdksl@xample.com,5558889999,22057499,mk,2025,C,0,false
+660697d68f4b235962551b72,Bob Johnson,sfsl@xample.com,5558889999,220574,mh,2025,C,0,false
+66069c6d8993fe14164ddabc,Bob Johnson,test@xample.com,5558889999,2205769,test,2025,C,0,false
+6606b96f469827d455fa496f,Bob Johnson,ptest@xample.com,5558889999,22057699,ptest,2025,C,0,false
+6606e8907130f6382210dae0,Bob Johnson,bob899@example.com,5558889999,22052799,abc,2025,C,0,false
+6606e9737feb3a13cee99d2e,Bob Johnson,bob898@example.com,5558889999,22052798,abc,2025,C,0,false
+6607211ef3d05ac35c299aa2,Bob Johnson,admin1@xample.com,5558889999,123,admin1,2025,C,0,
+6607215bf3d05ac35c299aa4,Bob Johnson,admin2@xample.com,5558889999,1234,admin2,2025,C,0,
+66080076c9ac5b3d335d798e,Bob Johnson,admin@xample.com,5558889999,admin,admin,2025,C,0,
+66085f4815121f4ca6e3d6c4,Bob Johnson,bob8989@example.com,5558889999,22052796,abc,2025,C,0,false
+660862f515121f4ca6e3d6c7,Swapnil,swapnil@example.com,5558889999,22051385,abc,2025,C,0,false
