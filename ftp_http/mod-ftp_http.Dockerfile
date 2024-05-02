@@ -1,4 +1,5 @@
 FROM alpine:latest
+LABEL org.opencontainers.image.source=https://github.com/Sasquatch/DefconDockerFiles
 ENV FTP_USER=foo \
 	FTP_PASS=bar \
 	GID=1000 \
