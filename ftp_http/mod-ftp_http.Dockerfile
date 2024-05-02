@@ -17,7 +17,7 @@ RUN apk add --no-cache --update \
 ADD [ "/src/vsftpd.conf", "/etc" ]
 ADD [ "/src/httpd.conf", "/etc/apache2/httpd.conf" ]
 ADD [ "/src/supervisord.conf", "/etc" ]
-ADD [ "/src/mod-entrypoint.sh", "/" ]
+ADD [ "/src/mod-entrypoint.sh", "/" ]	
 
 ADD [ "/data", "/wordlist" ]
 
