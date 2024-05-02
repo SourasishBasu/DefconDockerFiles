@@ -1,0 +1,29 @@
+name: Build and publish Defcon Docker Images
+on:
+  push:
+    branches: "main"
+
+jobs:
+  build-and-push-image:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Log in to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: https://ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push ssh image
+        run: |
+          docker build -t ghcr.io/sankalpx5/ssh:latest ./ssh/mod-ssh.Dockerfile .
+          docker push ghcr.io/sankalpx5/ssh:latest
+
+      - name: Build and push ftp image
+        run: |
+          docker build -t ghcr.io/sankalpx5/ftp:latest -f ./ftp_http/mod-ftp_http.Dockerfile .
+          docker push ghcr.io/sankalpx5/ftp:latest
+      
