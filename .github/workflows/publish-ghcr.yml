@@ -17,13 +17,18 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build and push ssh image
-        run: |
-          docker build -t ghcr.io/sankalpx5/ssh:latest ./ssh/mod-ssh.Dockerfile .
-          docker push ghcr.io/sankalpx5/ssh:latest
+      - name: Build and push FTP image
+        uses: docker/build-push-action@v4
+        with:
+          context: ./ftp_http
+          file: ./ftp_http/mod-ftp_http.Dockerfile
+          push: true
+          tags: ghcr.io/sankalpx5/ftp:latest
 
-      - name: Build and push ftp image
-        run: |
-          docker build -t ghcr.io/sankalpx5/ftp:latest -f ./ftp_http/mod-ftp_http.Dockerfile .
-          docker push ghcr.io/sankalpx5/ftp:latest
-      
+      - name: Build and push SSH image
+        uses: docker/build-push-action@v4
+        with:
+          context: ./ssh
+          file: ./ssh/mod-ssh.Dockerfile
+          push: true
+          tags: ghcr.io/sankalpx5/ssh:latest
